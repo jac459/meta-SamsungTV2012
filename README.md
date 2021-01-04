@@ -1,4 +1,7 @@
-# meta-SamsungTV2012 P
+
+This package is still under development.
+Currenlty, it's missing the power-on button. This will come thbrough broadlink learn IR-function, but that function isn't available yet.
+Will follow once broadlik is running in meta
 
 This package delivers support for Samsung TV's with older protocols (2012 and earlier) to be controlled wit a NEEO-remote through HTTP.
 
