@@ -353,7 +353,7 @@
       "z":"41c3dbd5.521c4c",
       "ip":"192.168.0.51",
       "command":"",
-      "name":"TV",
+      "name":"SamsungTV",
       "x":890,
       "y":280,
       "wires":[
@@ -366,7 +366,7 @@
       "id":"920bfa37.0c7b9",
       "type":"mqtt-broker",
       "name":"Spare neeo brain",
-      "broker":"192.168.0.31",
+      "broker":"127.0.0.1",
       "port":"1883",
       "clientid":"",
       "usetls":false,

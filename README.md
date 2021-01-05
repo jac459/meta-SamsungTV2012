@@ -29,7 +29,7 @@ The custom driver SamsungTV2012 sends all of its actions over MQTT (Mosquitto), 
 This functionality is included in the flow SamsungTV2012 Flow.json, located in thia package at directory "node-red Flow".
 
 You can import this file by copy&paste its content into a new node-red flow, but also by downloading the flow and importing it by selecting the downloaded file on node-red. 
-Following instructions apply to installation of the flow on a pre-configured NEEO eco system on your NEEO-Brain.  
+Following instructions apply to installation of the flow on a pre-configured NEEO eco system on your NEEO-Brain.  This means taty all traffic between meta, mosquitto and Node-RED will stay local (IP-address = 127.0.0.1) 
 We'll use <ip-address Brain> as the IP-address of your brain (don't type the < and > sign) and we'll be using the copy&paste method to import the flow.
 
 First, open the github repository where you've found this README.MD file (https://github.com/jac45eta-SamsungTV2012) and open the file SamsungTV2012 Flow.json which will show you the content of the flow.
@@ -57,13 +57,16 @@ You now have installed the extra node required for your flow to work. If you che
 
 Configure the flow
 As each network is different and IP-addresses vary, you need to tell Node-RED where to listen and talk to.
-The Node-RED flow needs to be told where it will receive the buttons pressed (MQTT on META) and what IP-address you Samsung TV has.
-In the flow SamsungTV2012, you'll see a box (it's in fact a 'node') at the left, called NEEO which represents the product MQTT running on the NEEO-Brain and at the right, a box called Samsung which represents your TV.
-Double click on the node named NEEO which will open the properties of this "node". Mosty of it is already configured, but we need to change the IP-address. Click on the pencil, right to the field named Server.
-Change the default IP-address and set it to <ip-address Brain> (without the < and >).
+The Node-RED flow needs to be told where it will receive the buttons pressed (MQTT on META) and what IP-address your Samsung TV has.
+When you look at the window with the SamsungTV2012-flow, you'll see an icon on the left called NEEO, representing the product MQTT running on the NEEO-Brain while at the right, a box called Samsung is present which represents your TV.
+In fact, its good practice to have the input to a flow on the left and the output to the right.
+
+We'll need to change the IP-address of our Samsung TV. To do so, double-click on the icon SamsungTV (output-node, so located at the right of the flow). You;ll see IP, with a default IP-address in it. Change the default IP-address and set it to the IP-address of your SamsungTV.
 Click "Update" at the right of this dialog and click 'Done".
 
-Now we'll change the IP-address of the node representing your Samsung TV by double clicking the box "TV". Change the IP-address in a similar way as done above, but now specifiy the IP-address of your Samsung TV.
+Now we'll check the IP-address of the connection to Mosquitto. The icon on the left, called NEEO represents the product MQTT running on the NEEO-Brain. Double click on that icon to open the properties of this "node". Now click on the pencil, right to the field named Server.
+You'll see that the IP-address is already configured as local (127.0.0.1), which is the correct value for a pre-configured NEEO eco system on your NEEO-Brain. If you're running mosquitto on another system, you'll have to fill the address of that mosquitto-system here.
+Again, on a pre-configured NEEO eco system on your NEEO-Brain, the node should be already correctly configured (IP: 127.0.0.1), so you do not need to change it. 
 
 Last, we're going to "Deploy" this flow and the changes we made to it; Node-RED is already telling us that we have not-deployed changes by the bright red Icon labeled "Deploy: at the rioght, just besides the submenu icon (3 bars).
 You always need to look at the Deploy-icon to know if the last changes are actually activated...
