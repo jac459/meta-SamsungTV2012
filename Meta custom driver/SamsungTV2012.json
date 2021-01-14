@@ -12,7 +12,7 @@
       "CurrentStatus" : {"label":" ", "listen":"MyStatus", "actionlisten":"VolumePlayedDisplay"}
   },
   "buttons":{
-     "POWER ON": {"label":"", "type":"http-get", "command":"DYNAMIK 'http://127.0.0.1:3000/irblaster/send_ir?code=sendir,1:1,1,38400,4,1,172,172,22,64,22,64,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,64,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,21,22,21,22,64,22,64,22,21,22,21,22,64,22,21,22,64,22,64,22,21,22,21,22,64,22,64,22,21,22,1820'"},
+     "POWER ON": {"label":"", "type":"http-get", "command":"http://127.0.0.1:3000/irblaster/send_ir?code=sendir,1:1,1,38400,4,1,172,172,22,64,22,64,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,64,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,21,22,21,22,64,22,64,22,21,22,21,22,64,22,21,22,64,22,64,22,21,22,21,22,64,22,64,22,21,22,1820"},
      "POWER OFF": {"label":"", "type":"static", "command":""},
      "VOLUME UP": {"label":"", "type":"static", "command":""},
      "VOLUME DOWN": {"label":"", "type":"static", "command":""},
