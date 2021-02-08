@@ -1,15 +1,10 @@
 {"name":"Samsung TV 2012", 
-  "manufacturer":"Samsung",
-  "version":5,
-  "type":"TV", 
-  "variables":{
-    "MyStatus":""
+  "manufacturer":"TonO",
+  "version":6,
+  "type":"TV" 
   },
   "switches":{
       "MUTE" : {"label":"Mute"}
-  },
-  "labels":{
-      "CurrentStatus" : {"label":" ", "listen":"MyStatus", "actionlisten":"VolumePlayedDisplay"}
   },
   "buttons":{
      "POWER ON": {"label":"", "type":"http-get", "command":"http://127.0.0.1:3000/irblaster/send_ir?code=sendir,1:1,1,38400,4,1,172,172,22,64,22,64,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,64,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,21,22,21,22,64,22,64,22,21,22,21,22,64,22,21,22,64,22,64,22,21,22,21,22,64,22,64,22,21,22,1820"},
@@ -39,8 +34,5 @@
      "DIGIT 9": {"label":"", "type":"static", "command":""},
      "SOURCE": {"label":"", "type":"static", "command":""}
   },
-  "sliders":{
-      "VOLUME": {"label":"", "unit" : "db"}
-  }
-}
+ }
 
